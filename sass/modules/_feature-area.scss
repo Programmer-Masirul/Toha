@@ -1,0 +1,294 @@
+.feature-area {
+    position: relative;
+    background-position-y: 12px !important;
+    .feature-shape {
+      position: absolute;
+      top: 12px;
+      right: 0;
+      z-index: -99;
+      flex-shrink: 0;
+      flex-shrink: 0;
+      @include sm {
+        height: 120px;
+        width: 120px;
+        transform: translate(0%, -50%);
+        display: none;
+      }
+    }
+
+    .feature-container {
+      position: relative;
+      border-radius: 20px;
+      padding: 60px 30px;
+      background: $white;
+      box-shadow: 0px 4px 60px 0px rgba(211, 211, 211, 0.25);
+      @include sm {
+        padding: 40px 16px;
+      }
+      .shape-1 {
+        position: absolute;
+        top: 0;
+        left: 12px !important;
+        z-index: 99;
+        transform: translate(-57%, -75%);
+        @include sm {
+          z-index: 20;
+          transform: translate(-18%, -83%);
+        }
+      }
+      .title {
+        text-align: center;
+        margin-bottom: 40px;
+        color: $black;
+        @include sm{
+          font-size: 35px;
+        }
+      }
+      .feather-item-wrapper {
+        display: flex;
+        gap: 45px;
+        @include transition;
+        @include lg {
+          gap: 12px;
+        }
+        
+        @include md {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          gap: 20px;
+        }
+        @include sm {
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          gap: 20px;
+        }
+      }
+    }
+}
+.feature-item {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  gap: 27px;
+  @include transition;
+  @include lg {
+    gap: 12px;
+  }
+  @include xs {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+  }
+  @include md {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    text-align: center;
+    .icon-wrapper {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }
+  .icon-wrapper {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    border: 2px solid $secondary-color;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    gap: 10px;
+    position: relative;
+    @include transition;
+    @media only screen and (min-width: 0px) and (max-width: 768px) {
+      width: 65px;
+      height: 65px;
+      gap: 5px;
+      margin-bottom: 0;
+    }
+    @include lg {
+      width: 70px;
+      height: 70px;
+      gap: 10px;
+    }
+    .count {
+      width: 25px;
+      height: 25px;
+      background-color: $text-color;
+      border-radius: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translate(0, -25%);
+      font-family: $body-font;
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      color: $white;
+      @include sm {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+      }
+      @include lg {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+      }
+    }
+    i {
+      font-size: 40px;
+      @include transition;
+      @include sm {
+        font-size: 28px;
+      }
+    }
+  }
+  .content {
+    h4,
+    .title {
+      margin: 0;
+      text-align: unset;
+      @include lg {
+        font-size: 22px;
+        line-height: 29px;
+      }
+    }
+    p,
+    .desc {
+      margin-top: 7px;
+      margin-bottom: 0;
+      @include sm {
+        margin-top: 0;
+      }
+    }
+    p{
+      br{
+        @media only screen and (min-width: 0px) and (max-width: 768px){
+          display: none;
+        }
+      }
+    }
+  }
+  &:hover {
+    .icon-wrapper {
+      @include transition;
+      background: $primary-color;
+      border-color: $primary-color; 
+      i {
+        color: #fff;
+      }
+      .count {
+        background-color: $black;
+      }
+    }
+  }
+  &.active {
+    .icon-wrapper {
+      @include transition;
+      background: $primary-color;
+      border-color: $primary-color;
+      i {
+        color: #fff;
+      }
+      .count {
+        background-color: $black;
+      }
+    }
+  }
+ 
+}
+
+// Theme Responsive
+.feature-area{
+  @include rmaxwd(991){
+    background-image: unset !important;
+  }
+  @include lg{
+    background-image: unset !important;
+  }
+  @include xl{
+    background-image: unset !important;
+  }
+  .elementor-section{
+    .shape-1{
+        top: 12px !important;
+        left: -67px !important;
+        z-index: 99;
+        transform: translate(-0%, 0%);
+      @include rmaxwd(991){
+        display: none;
+      }
+      @include lg{
+        display: none;
+      }
+      @include xl{
+          top: 47px !important;
+          left: -56px !important;
+      }
+    }
+  }
+  >.elementor-container{
+    @include sm{
+      padding: 0 12px;
+    }
+    .feature-container{
+      @include lg{
+        padding: 28px;
+        margin: 0 50px;
+      }
+      @include xl{
+        padding: 30px 12px 30px 30px;
+        margin: 0 48px;
+      }
+    }
+  }
+  .elementor-container{
+    .feather-item-wrapper{
+      display: unset;
+    }
+    .feature-item{
+      @include sm{
+        margin-bottom: 20px;
+        gap: 18px;
+      }
+      @include lg{
+        padding-right: 12;
+      }
+      &:last-child{
+        @include lg{
+          padding-right: 0;
+        }
+      }
+      .icon-wrapper{
+        @include md{
+          margin-bottom: 0;
+        }
+      }
+      .content{
+        p{
+          br{
+            @include sm{
+              display: none;
+            }
+            @include lg{
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

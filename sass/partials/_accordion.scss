@@ -1,0 +1,96 @@
+.accordion-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  &.style-2{
+    .accordion-list-item{
+      background-color: $white;
+      .accordion-head{
+        &:after{
+          color: $text-color;
+        }
+        .accordion-title{
+        color: $black;
+        }
+      }
+      .accordion-item-body{
+        color: $text-color;
+      }
+    }
+  }
+  .accordion-list-item {
+    position: relative;
+    border-top: 1px solid #514F56;
+    &:first-child{
+      border-top: transparent;
+    }
+
+    .accordion-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 32px;
+      cursor: pointer;
+      flex-direction: row;
+      position: relative;
+      padding: 20px 0;  
+
+
+      @include sm {
+        gap: 8px;
+      }
+      @include lg {
+        gap: 8px;
+      }
+      @include xl {
+      }
+
+      &:after {
+        position: relative;
+        content: "\f068";
+        font-family: $font-awesome;
+        color: $white;
+        font-size: 20px;
+      }
+      &.collapsed {
+        &:after {
+          content: "\2b";
+        }
+      }
+
+      .accordion-title {
+        font-family: $heading-font;
+        font-size: 24px;
+        line-height: 30px;
+        color: $white;
+        font-weight: 600;
+        margin-bottom: 0;
+        @include sm {
+          font-size: 18px;
+          line-height: 30px;
+        }
+        @include lg {
+          font-size: 20px;
+          line-height: 30px;
+        }
+      }
+    }
+    .accordion-item-body {
+      color: $white;
+      position: relative;
+      padding: 20px 0;
+      border-top: 1px solid #514F56;
+      p {
+        margin-bottom: 0;
+        font-family: $body-font;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 29px;
+        @include sm {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
+ 

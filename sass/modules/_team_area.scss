@@ -1,0 +1,58 @@
+.team-area {
+    position: relative;
+    @include lg {
+        height: auto;
+    }
+    @include md {
+        height: auto;
+    }
+    @include sm {
+        height: auto;
+    }
+    .shape-1 {
+        position: absolute;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        margin-top: 268px;
+        z-index: -2;
+        overflow: hidden;
+        height: 100%;
+    }
+
+    .section-title {
+        @include sm {
+            padding: 10px;
+        }
+    }
+}
+
+// Theme
+.team-area{
+    &.style-1{
+        .elementor-container{
+            >.elementor-widget-container{
+                @include sm{
+                    padding-bottom: 24px;
+                }
+            }
+            .team-section-title{
+                .elementor-widget-container{
+                    @include sm{
+                        padding-bottom: 24px;
+                    }
+                    @include md{
+                        padding-bottom: 32px;
+                    }
+                    @include lg{
+                        padding-bottom: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

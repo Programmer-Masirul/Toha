@@ -1,0 +1,33 @@
+.service-area {
+    @include rmaxwd(1400) {
+        margin-top: 0;
+        padding-top: 70px;
+    }
+    .border-wrapper {
+        margin-top: 0;
+        z-index: 10;
+        position: relative;
+        .service-slider-wrapper{
+            @include sm{
+                padding: 12px 24px 0px 24px;
+            }
+        }
+    }
+}
+
+.service-offer-inner {
+    position: relative;
+    .shape-1 {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translate(50%, -50%);
+        @include rmaxwd(1399) {
+            display: none;
+        }
+        img {
+            position: relative;
+            z-index: 0;
+        }
+    }
+}

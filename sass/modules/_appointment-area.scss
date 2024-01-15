@@ -1,0 +1,369 @@
+.consultation-form {
+    position: relative;
+    background: $black;
+    border-radius: 20px 20px 0px 0px;
+    padding: 37px;
+    z-index: 10;
+    @include xl {
+        margin: 0;
+    }
+    @include md {
+        border-radius: 0px;
+    }
+    @include sm {
+        border-radius: 0px;
+        padding: 70px 20px 20px 20px;
+    }
+    .base-area {
+        background: linear-gradient(to top, $black, $primary-color);
+        border-image-slice: 1;
+        border-radius: 20px 20px 0 0;
+        padding: 2px;
+        overflow: hidden;
+        .base-inner-area {
+            background-color: $black;
+            overflow: hidden;
+            border-radius: 20px 20px 0 0;
+            .title{
+                margin-top: 40px;
+                @include sm{
+                    margin-top: 24px;
+                    font-size: 27px;
+                }
+                br{
+                    @include sm{
+                        display: none;
+                    }
+                    @include lg{
+                        // display: none;
+                    }
+                }
+                
+            }
+        }
+        p {
+            font-family: $heading-font;
+            margin-top: 18px;
+            text-align: center;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            color: $white;
+            span {
+                font-family: $heading-font;
+                color: $primary-color;
+            }
+            &:first-child{
+                margin-top: 0;
+            }
+        }
+        .appointment-form {
+            .contacts-date{
+                position: relative;
+                z-index: 99;
+            }
+            .form-box {
+                margin-left: 33px;
+                margin-right: 35px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                @include sm{
+                    margin: 0 18px;
+                }
+                @include xl{
+                    margin: 0 12px;
+                }
+                .form-btn {
+                    .theme-btn {
+                        display: flex;
+                        justify-content: center;
+                        background: $primary-color;
+                        width: 100%;
+                        height: 59px;
+                        &:hover {
+                            background: $white;
+                            color: $primary-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    input[type="date"]::-webkit-calendar-picker-indicator {
+        // background: transparent;
+        // bottom: 0;
+        // color: transparent;
+        // cursor: pointer;
+        // height: auto;
+        // left: 0;
+        position: absolute;
+        // right: 0;
+        // top: 0;
+        // width: auto;
+        opacity: 0;
+        font-size: 40px;
+        line-height: 30px;
+        right: 12px;
+    }
+}
+.appointment-area {
+    &.style-1 {
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+        z-index: 2;
+        overflow: hidden;
+        background-color: $gray;
+        &:after {
+            content: "";
+            background: rgba(2, 10, 39, 0.7);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 100%;
+            height: 100%;
+            opacity: 0.8;
+            @media screen and (min-width: "1200px") {
+                display: none;
+            }
+        }
+        img {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+    &.style-2 {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .feature-shape {
+            position: absolute;
+            top: 40px;
+            left: 50px;
+            z-index: -99;
+            @include rmaxwd(1199) {
+                display: none;
+            }
+        }
+        @include md {
+            .container {
+                padding: 0px;
+            }
+        }
+        @include sm {
+            .container {
+                padding: 0px;
+            }
+        }
+        p {
+            font-family: $heading-font;
+            margin-top: 38px;
+            text-align: center;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            color: $white;
+            span {
+                font-family: $heading-font;
+                color: $primary-color;
+            }
+        }
+        .consultation-form-wrapper{
+            position: relative;
+            .shape-1{
+                position: absolute;
+                bottom: 0;
+                right: 0;
+                transform: translate(50%, 50%);
+                z-index: 0;
+                @include rmaxwd(1399){
+                    display: none;
+                }
+            }
+        }
+        .consultation-form{
+            border-radius: 0 0 20px 20px;
+            position: relative;
+            z-index: 10;
+            padding: 37px;
+            padding-top: 0;
+            
+            .base-area{
+                padding: 0;
+                background: none;
+                border-radius: 0;
+                .base-inner-area{
+                    border-radius: 0 0 20px 20px;
+                    border: 1px solid rgba(255, 255, 255, 0.15);
+                    border-top: none;
+                }
+            }
+        }
+        .appointment-form {
+            height: 100%;
+            form {
+                margin: 37px 30px 30px 30px;
+                height: 100%;
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+                flex-direction: row;
+                @include sm{
+                    margin: 18px;
+                }
+                @include md{
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                div:last-child {
+                    grid-column: 1 / 3;
+                }
+
+                .form-btn {
+                    width: 100%;
+                    .theme-btn {
+                        display: flex;
+                        justify-content: center;
+                        background: $primary-color;
+                        width: 100%;
+                        height: 59px;
+                        &:hover {
+                            background: $white;
+                            color: $primary-color;
+                        }
+                    }
+                }
+                .wpcf7-response-output{
+                    margin: 0 !important;
+                }
+                @include md {
+                    flex-direction: column;
+                    gap: 30px;
+                }
+                @include sm {
+                    grid-template-columns: repeat(1, 1fr);
+                }
+            }
+            
+        }
+    }
+    //global style
+    .title-border1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1px;
+        margin-bottom: 4px;
+        p {
+            background: rgba(223, 223, 223, 0.20);
+            width: 416px;
+            height: 1px;
+            @include sm {
+                background: #DFDFDF;
+                width: 250px;
+            }
+            @include md {
+                background: #DFDFDF;
+            }
+            @include xl{
+                width: 298px;
+            }
+        }
+    }
+    .title-border2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 1px;
+        margin-bottom: 43px;
+        @include sm{
+            margin-bottom: 18px;
+        }
+        p {
+            background: rgba(223, 223, 223, 0.20);
+            width: 349px;
+            height: 1px;
+            @include sm {
+                background: #DFDFDF;
+                width: 200px;
+            }
+            @include md {
+                background: #DFDFDF;
+            }
+            @include xl{
+                width: 248px;
+            }
+        }
+    }
+}
+
+::placeholder {
+    color: $black-300;
+    opacity: 1;
+}
+.input-box {
+    width: 100%;
+    position: relative;
+    input {
+        width: 100%;
+        border-radius: 5px;
+        padding: 15px 26px 16px 25px;
+        background: rgba(223, 223, 223, 0.05);
+        font-family: $body-font;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 29px;
+        color: $black-300;
+    }
+    i {
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        font-size: 30px;
+    }
+}
+
+// Theme 
+.elementor-section{
+    .appointment-area{
+        &.style-1{
+            .consultation-form{
+                padding-bottom: 0;
+            }
+        }
+        &.style-2{
+            .consultation-form{
+                padding: 37px;
+                @include sm{
+                    padding: 37px;
+                    padding-top: 0;
+                }
+                .appointment-form{
+                    .input-box{
+                        p{
+                            margin-bottom: 0;
+                        }
+                        .contacts-date{
+                            p{
+                                margin-bottom: -37px;
+                            }
+                        }
+                    }
+                    .form-btn{
+                        p{
+                            margin-bottom: -40px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

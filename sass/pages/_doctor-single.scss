@@ -1,0 +1,162 @@
+.doctor-single-area {
+    position: relative;
+    .feature-shape {
+        position: absolute;
+        top: 12px;
+        right: 44px;
+        transform: rotate(24deg);
+        i {
+            font-size: 170px;
+            flex-shrink: 0;
+            color: #a6a6a6;
+            @include lg{
+                font-size: 112px;
+            }
+        }
+        @include rmaxwd(991) {
+            display: none;
+        }
+    }
+    .image {
+        img {
+            border-radius: 20px;
+        }
+    }
+    .progress-title {
+        margin: 58px 0 35px 0;
+        padding-left: 4px;
+    }
+    .content-wrapper {
+        padding: 70px 66px 60px 80px;
+        box-shadow: 0px 4px 60px 0px rgba(214, 214, 214, 0.25);
+        border-radius: 20px;
+        @include rmaxwd(767) {
+            padding: 35px 20px;
+        }
+        @include rmaxwd(991) {
+            margin-top: 30px;
+        }
+        @include lg {
+            padding: 24px 20px;
+        }
+
+        .sub-title {
+            margin-top: 17px;
+            @include lg {
+                margin-top: 8px;
+            }
+        }
+        .description {
+            margin-top: 24px;
+            margin-bottom: 0;
+            @include lg {
+                margin-top: 16px;
+            }
+        }
+        table {
+            width: 100%;
+            margin-top: 20px;
+            border-spacing: 0 8px;
+            @include lg {
+                margin-top: 16px;
+            }
+            tr {
+                margin-bottom: 8px;
+            }
+            td,
+            th {
+                border: none;
+                text-align: start;
+                padding: 0;
+                line-height: 35px;
+            }
+        }
+        .social {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-left: 4px;
+            @include lg {
+                margin-top: 8px;
+            }
+            a {
+                width: 30px;
+                height: 30px;
+                border-radius: 100%;
+                background-color: $white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                @include transition;
+                i {
+                    font-size: 16px;
+                    line-height: 16px;
+                    color: $black;
+                }
+                &:hover {
+                    background-color: $primary-color;
+                    i {
+                        color: $white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+// Theme
+.progress-area{
+    >.elementor-container{
+        @include sm{
+            padding: 0 12px !important;
+        }
+        @include md{
+            padding: 0 42px !important;
+        }
+        @include lg{
+            padding: 0 42px !important;
+        }
+        @include xl{
+            padding: 0 82px !important;
+        }
+    }
+    .elementor-container{
+        @include xl {
+            gap: 48px;
+        }
+        .skill-progress-wrapper{
+            padding-top: 12px;
+            .skill-progressbar-left,
+            .skill-progressbar-right{
+                .elementor-widget-wrap{
+                    gap: 30px;
+                }
+            }
+            .elementor-container{
+                gap: 236px;
+                @include rmaxwd(991) {
+                    gap: 12px;
+                }
+                @include lg {
+                    gap: 24px;
+                }
+                .elementor-col-50{
+                    @include md{
+                        width: unset;
+                    }
+                    @include lg{
+                        width: unset;
+                    }
+                }
+            }
+        }
+    }
+    .elementor-widget-wrap{
+        @include sm{
+            padding: 0 !important;
+        }
+        @include xl{
+            padding: 0 !important;
+        }
+    }
+}

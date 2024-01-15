@@ -1,0 +1,163 @@
+.eye-care-skill-area {
+    position: relative;
+
+    .area-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+    .content-wrapper {
+        @include rmaxwd(991) {
+            margin-top: 48px;
+        }
+        .section-title{
+            @include rmaxwd(991){
+                padding-right: 40px;
+            }
+        }
+    }
+    .section-desc {
+        margin-top: 30px;
+    }
+}
+.eye-care-image-card {
+    position: relative;
+    display: flex;
+    align-items: end;
+    .image {
+        display: flex;
+        z-index: 1;
+    }
+    .shape {
+        flex-shrink: 0;
+        right: 69px;
+        top: 31px;
+        position: absolute;
+        z-index: 0;
+    }
+    .child {
+        flex-shrink: 0;
+        margin-bottom: 25px;
+        margin-left: -86px;
+        z-index: 10;
+        position: relative;
+        @include sm{
+            margin-left: -76%;
+            width: 200px;
+            height: auto;
+        }
+        @include rmaxwd(1199){
+            flex-shrink: unset;
+        }
+    }
+    
+}
+
+// For theme
+.image {
+    display: flex;
+    z-index: 1;
+    .elementor-widget-container{
+        img{
+            border-radius: 10px;
+        }
+    }
+}
+.shape-1 {
+    display: flex;
+    position: absolute !important;
+    right: 75px;
+    z-index: 0;
+}
+.child-img {
+    position: absolute !important;
+    bottom: 0;
+    right: -24%;
+    top: 25%;
+    z-index: 3;
+    @include sm{
+        right: 0;
+        margin-bottom: 0 !important;
+        width: 200px !important;
+        height: auto;
+        display: flex;
+        justify-content: end;
+        align-items: end !important;
+    }
+    @include md{
+        right: 0;
+        width: 250px !important;
+        display: flex;
+        justify-content: end;
+        align-items: end !important;
+    }
+    .elementor-widget-container{
+        img{
+            border-radius: 10px;
+        }
+    }
+    .elementor-widget-container{
+        @include sm{
+            display: flex;
+            justify-content: end;
+        }
+    }
+}
+
+// Theme Responsive
+.eye-care-skill-area{
+    >.elementor-container{
+        @include sm{
+            padding: 0 12px;
+        }
+        @include md{
+            padding: 0 42px;
+        }
+        @include lg{
+            padding: 0 12px;
+        }
+        @include xl{
+            padding: 0 24px;
+        }
+    }
+    .elementor-container {
+        .shape-1{
+            justify-content: end !important;
+        }
+        .child-img{
+            @include lg{
+                width: 200px !important;
+                right: 0;
+                top: unset !important;
+                bottom: 0 !important;
+            }
+        }
+        .section-desc{
+            margin-bottom: 30px;
+        }
+        .elementor-col-50{
+            @include md{
+                width: 70% !important;
+            }
+        }
+        .content-wrapper{
+            >.elementor-widget-wrap{
+                @include sm{
+                    margin-left: 0 !important;
+                }
+                @include md{
+                    margin-left: 0 !important;
+                }
+                @include lg{
+                    margin-left: 48px !important;
+                }
+                @include xl{
+                    margin-left: 48px !important;
+                }
+            }
+            .skill-progressbar{
+                margin-bottom: 31px;
+            }
+        }
+    }
+}
